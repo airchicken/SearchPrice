@@ -1,21 +1,21 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[16]:
+# In[21]:
 
 
 import requests ,json
 import pandas as pd
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 Edg/92.0.902.62', 'x-requested-with': 'XMLHttpRequest'}
 
-def SearchData(start, end, period):
+def SearchData(start, end):
     data={
         'curr_id': '6408',
         'smlID': '1159963',
         'header': 'AAPL历史数据',
         'st_date': str(start)[:4]+'/'+str(start)[4:6]+'/'+str(start)[6:8],
         'end_date': str(end)[:4]+'/'+str(end)[4:6]+'/'+str(end)[6:8],
-        'interval_sec': period,
+        'interval_sec': 'Daily',
         'sort_col': 'date',
         'sort_ord': 'DESC',
         'action': 'historical_data'}
@@ -40,5 +40,11 @@ def ChiDateToNum(date):
     if len(day)==1:day='0'+day
     return(year+mon+day)
 
-SearchData('20200901','20200910','Daily')
+SearchData(20210310, 20210320)
+
+
+# In[ ]:
+
+
+
 
