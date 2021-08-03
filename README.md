@@ -1,5 +1,4 @@
-用SearchData Function輸入時間範圍與區間長度，
-會得到 股價.json
+輸入 時間範圍 與 查詢區間 給SearchData(起始日期, 結束日期, 查詢區間)可得到 股價.json
 
-起始時間 與 結束時間 請輸入阿拉伯數字 e.g. 20210803
-區間長度有 'Daily' 'Weekly' 'Monthly'
+起始日期 與 結束日期 請輸入阿拉伯數字 e.g. 20210803
+查詢區間請輸入以下三則一 'Daily' 'Weekly' 'Monthly'
